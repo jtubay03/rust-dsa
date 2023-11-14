@@ -1,0 +1,1 @@
+/Users/jtubay/Documents/code/rust/rust-dsa/target/debug/librust_dsa.rlib: /Users/jtubay/Documents/code/rust/rust-dsa/src/data_structures/mod.rs /Users/jtubay/Documents/code/rust/rust-dsa/src/data_structures/stack.rs /Users/jtubay/Documents/code/rust/rust-dsa/src/lib.rs
