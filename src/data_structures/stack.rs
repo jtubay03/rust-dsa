@@ -18,6 +18,7 @@ impl<T> Stack<T> {
         self.items.push(item);
     }
 
+
     pub fn pop(&mut self) -> Result<T, StackError> {
         self.items.pop().ok_or(StackError::EmptyStack)
     }

@@ -1,6 +1,6 @@
 pub struct Node<T> {
     val: Option<T>,
-    next_node: Option<Box<T>>,
+    next_node: Option<Box<Node<T>>>,
 }
 
 pub struct LinkedList<T> {
@@ -22,19 +22,26 @@ impl <T> LinkedList<T> {
     }
 
     pub fn push_front(&mut self, val: T) {
-
     }
 
     pub fn push_back(&mut self, val: T) {
-
+        let new_node = Box::new(Node {
+            val: Some(val),
+            next_node: None,
+        });
+        let mut current = &mut self.head;
+        while let Some(ref mut node) = current {
+            if node.next_node.is_none() {
+                node.next_node = Some(new_node);
+                return;
+            }
+            current = &mut node.next_node;
+        }
     }
 
-    pub fn is_empty(&self) -> bool {
-        true
-    }
     // result for return
     pub fn pop_front(&mut self) {
-
+        
     }
     // result for return
     pub fn pop_back(&mut self) {
